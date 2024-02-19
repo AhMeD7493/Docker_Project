@@ -82,22 +82,22 @@ WSGI_APPLICATION = 'resturant_project.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
 # DATABASES = {
 #     'default': {
-#         'ENGINE': config('database_engine'),
-#         'NAME': config('name'),
-#         'USER': config('user'),
-#         'PASSWORD': config('pass'),
-#         'HOST': config('host') ,# Endpoint of your RDS database
-#         'PORT': config('port'),
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
+DATABASES = {
+    'default': {
+        'ENGINE': config('database_engine'),
+        'NAME': config('name'),
+        'USER': config('user'),
+        'PASSWORD': config('pass'),
+        'HOST': config('host') ,# Endpoint of your RDS database
+        'PORT': config('port'),
+    }
+}
 
 
 # Password validation
